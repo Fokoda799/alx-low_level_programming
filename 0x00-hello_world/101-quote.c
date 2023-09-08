@@ -1,5 +1,5 @@
 #include <stdio.h>
-#includ <unistd.h>
+#include <unistd.h>
 
 /**
  * main - Display a txet with print fun
