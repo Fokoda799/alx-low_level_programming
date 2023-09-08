@@ -2,7 +2,7 @@
 
 /**
  * main - Display a txet with print fun
- * @parameterx: Void to return any data type
+ * @void: Void to return any data type
 (* a blank line
  * Description: Longer description of the function)?
 (* section header: Section description)*
