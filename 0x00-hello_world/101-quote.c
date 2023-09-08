@@ -1,4 +1,5 @@
 #include <stdio.h>
+#includ <unistd.h>
 
 /**
  * main - Display a txet with print fun
@@ -10,5 +11,6 @@
 */
 int main(void)
 {
-  return ("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
+fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
+return (1);
 }
