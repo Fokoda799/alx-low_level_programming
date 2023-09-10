@@ -7,11 +7,10 @@
 */
 int main(void)
 {
-char letter;
-for (letter = 'a'; letter <= 'z'; letter++)
+for (int i = 0; i <= 9; i++)
 {
-if (letter != 'e' && letter != 'q')
-putchar(letter);
+printf("%i", i);
+i++;
 }
 putchar('\n');
 return (0);
