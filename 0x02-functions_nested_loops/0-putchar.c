@@ -1,15 +1,21 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* main(:)? (- short description)?
-* @void: (description of parameter x)?)*
-* a blank line)?
-* (Description:)? (Description of function)?
-* (section header: (section description)? 
-* Return : 0
+* main - print _putchar
+* is written by mbah
+* Return: 0
 */
+
 int main(void)
 {
-puts("_putchar");
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
+_putchar('\n');
 return (0);
 }
