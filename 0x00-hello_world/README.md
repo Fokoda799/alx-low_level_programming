@@ -65,90 +65,104 @@ To find the correct header to include in your C source code when using a standar
 
 The `main` function plays a crucial role in influencing the return value of a C program. The value you return from the `main` function determines the program's exit status. By convention, a return value of 0 indicates a successful execution, while non-zero values often indicate specific errors or conditions. The exit status can be useful for scripting and automation, as it allows other programs or scripts to determine whether your C program ran successfully.
 
-Task List
-0️⃣ Preprocess C File
-Objective: Write a script that runs a C file through the preprocessor and saves the result into another file.
+Certainly! Here's the updated README with hints added to each task to provide additional guidance:
 
-Instructions:
+---
 
-Set the C file name to the value stored in the variable $CFILE.
-Save the preprocessed output in a file named c.
-Hint: You can use the gcc compiler with the -E option to perform preprocessing.
+## Task List
 
-1️⃣ Compile C File (No Linking)
-Objective: Write a script that compiles a C file without linking.
+### 0️⃣ Preprocess C File
 
-Instructions:
+**Objective**: Write a script that runs a C file through the preprocessor and saves the result into another file.
 
-Set the C file name to the value stored in the variable $CFILE.
-Generate the output file by replacing the .c extension with .o. Example: If the C file is main.c, the output file should be main.o.
-Hint: Use the gcc compiler with the -c option to compile without linking.
+**Instructions**:
+- Set the C file name to the value stored in the variable `$CFILE`.
+- Save the preprocessed output in a file named `c`.
 
-2️⃣ Generate Assembly Code
-Objective: Write a script that generates the assembly code of a C file and saves it in an output file.
+**Hint**: You can use the `gcc` compiler with the `-E` option to perform preprocessing.
 
-Instructions:
+### 1️⃣ Compile C File (No Linking)
 
-Set the C file name to the value stored in the variable $CFILE.
-Generate the output file by replacing the .c extension with .s. Example: If the C file is main.c, the output file should be main.s.
-Hint: You can use the gcc compiler with the -S option to generate assembly code.
+**Objective**: Write a script that compiles a C file without linking.
 
-3️⃣ Compile and Create Executable
-Objective: Write a script that compiles a C file and creates an executable named "cisfun".
+**Instructions**:
+- Set the C file name to the value stored in the variable `$CFILE`.
+- Generate the output file by replacing the `.c` extension with `.o`. Example: If the C file is `main.c`, the output file should be `main.o`.
 
-Instructions:
+**Hint**: Use the `gcc` compiler with the `-c` option to compile without linking.
 
-Set the C file name to the value stored in the variable $CFILE.
-Create the executable named "cisfun".
-Hint: Use the gcc compiler without any additional options to compile and link.
+### 2️⃣ Generate Assembly Code
 
-4️⃣ Print String
-Objective: Write a C program that prints "Programming is like building a multilingual puzzle" followed by a new line.
+**Objective**: Write a script that generates the assembly code of a C file and saves it in an output file.
 
-Instructions:
+**Instructions**:
+- Set the C file name to the value stored in the variable `$CFILE`.
+- Generate the output file by replacing the `.c` extension with `.s`. Example: If the C file is `main.c`, the output file should be `main.s`.
 
-Use the puts function to print the string.
-Ensure the program ends with the value 0.
-Hint: You can use the puts function to print a string followed by a newline character.
+**Hint**: You can use the `gcc` compiler with the `-S` option to generate assembly code.
 
-5️⃣ Print with Proper Grammar
-Objective: Write a C program that prints "with proper grammar, but the outcome is a piece of art," followed by a new line.
+### 3️⃣ Compile and Create Executable
 
-Instructions:
+**Objective**: Write a script that compiles a C file and creates an executable named "cisfun".
 
-Use the printf function to print the string.
-Ensure the program returns 0.
-Compile the program without warnings using the -Wall gcc option.
-Hint: You can use the printf function with proper formatting to print the desired string.
+**Instructions**:
+- Set the C file name to the value stored in the variable `$CFILE`.
+- Create the executable named "cisfun".
 
-6️⃣ Print Size of Types
-Objective: Write a C program that prints the size of various types on the computer it is compiled and run on.
+**Hint**: Use the `gcc` compiler without any additional options to compile and link.
 
-Instructions:
+### 4️⃣ Print String
 
-Your program should produce the same output as the example provided.
-Warnings are allowed.
-Ensure the program returns 0.
-Note: You might need to install the package libc6-dev-i386 on Linux to test the -m32 gcc option.
-Hint: You can use the sizeof operator to determine the size of various types in C.
+**Objective**: Write a C program that prints "Programming is like building a multilingual puzzle" followed by a new line.
 
-7️⃣ Generate Assembly Code (Intel Syntax)
-Objective: Write a script that generates the assembly code (Intel syntax) of a C file and saves it in an output file.
+**Instructions**:
+- Use the `puts` function to print the string.
+- Ensure the program ends with the value 0.
 
-Instructions:
+**Hint**: You can use the `puts` function to print a string followed by a newline character.
 
-Set the C file name to the value stored in the variable $CFILE.
-Generate the output file by replacing the .c extension with .s. Example: If the C file is main.c, the output file should be main.s.
-Hint: You can use the gcc compiler with the -S option and specify the Intel syntax using the -masm=intel option.
+### 5️⃣ Print with Proper Grammar
 
-8️⃣ Print Art to Standard Error
-Objective: Write a C program that prints "and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error.
+**Objective**: Write a C program that prints "with proper grammar, but the outcome is a piece of art," followed by a new line.
 
-Instructions:
+**Instructions**:
+- Use the `printf` function to print the string.
+- Ensure the program returns 0.
+- Compile the program without warnings using the `-Wall` gcc option.
 
-Do not use any functions listed in the NAME section of the man (3) printf or man (3) puts.
-Ensure the program returns 1.
-Compile the program without any warnings using the -Wall gcc option.
-Hint: You can use the write function to print to the standard error file descriptor (stderr). Don't forget to include the necessary headers.
+**Hint**: You can use the `printf` function with proper formatting to print the desired string.
+
+### 6️⃣ Print Size of Types
+
+**Objective**: Write a C program that prints the size of various types on the computer it is compiled and run on.
+
+**Instructions**:
+- Your program should produce the same output as the example provided.
+- Warnings are allowed.
+- Ensure the program returns 0.
+- Note: You might need to install the package `libc6-dev-i386` on Linux to test the `-m32` gcc option.
+
+**Hint**: You can use the `sizeof` operator to determine the size of various types in C.
+
+### 7️⃣ Generate Assembly Code (Intel Syntax)
+
+**Objective**: Write a script that generates the assembly code (Intel syntax) of a C file and saves it in an output file.
+
+**Instructions**:
+- Set the C file name to the value stored in the variable `$CFILE`.
+- Generate the output file by replacing the `.c` extension with `.s`. Example: If the C file is `main.c`, the output file should be `main.s`.
+
+**Hint**: You can use the `gcc` compiler with the `-S` option and specify the Intel syntax using the `-masm=intel` option.
+
+### 8️⃣ Print Art to Standard Error
+
+**Objective**: Write a C program that prints "and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error.
+
+**Instructions**:
+- Do not use any functions listed in the NAME section of the man (3) `printf` or man (3) `puts`.
+- Ensure the program returns 1.
+- Compile the program without any warnings using the `-Wall` gcc option.
+
+**Hint**: You can use the `write` function to print to the standard error file descriptor (stderr). Don't forget to include the necessary headers.
 
 Thank you for exploring our project and reviewing the README and the tasks provided. We believe these hints will assist you in completing the tasks successfully. If you have any questions or require further assistance, please don't hesitate to reach out. We wish you success in completing the tasks and hope they contribute to your growth as a developer. 🖥️📚
