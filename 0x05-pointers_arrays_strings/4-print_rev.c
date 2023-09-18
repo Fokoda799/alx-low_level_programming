@@ -11,8 +11,9 @@ void print_rev(char *s)
 {
 int len = strlen(s);
 char r[len];
+int i;
  
-for (int i = len; i >= 0;i--)
+for (i = len; i >= 0;i--)
 {
 r[len - i] = s[i - 1];
 }
