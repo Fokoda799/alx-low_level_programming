@@ -7,7 +7,7 @@
  * @s: type char pointer
  *Return: 0.
  */
-void _strlen(char *s)
+int _strlen(char *s)
 {
 return (strlen(*s));
 }
