@@ -10,13 +10,12 @@
 void print_rev(char *s)
 {
 int len = strlen(s);
-char r[len];
+char let;
 int i;
- 
 for (i = len; i >= 0;i--)
 {
-r[len - i] = s[i - 1];
+let = s[i - 1];
+_putchar(let);
 }
-r[len] = '\0';
-printf("%s", r);
+_putchar("\n");
 }
