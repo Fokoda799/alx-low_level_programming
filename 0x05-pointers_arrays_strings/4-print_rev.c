@@ -15,7 +15,7 @@ int i;
 for (i = len; i >= 0;i--)
 {
 let = s[i - 1];
-_putchar(let);
+printf("%c", let);
 }
-_putchar('\n');
+printf("\n");
 }
