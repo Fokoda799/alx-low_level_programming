@@ -17,5 +17,5 @@ for (i = len; i >= 0;i--)
 let = s[i - 1];
 _putchar(let);
 }
-_putchar("\n");
+_putchar('\n');
 }
