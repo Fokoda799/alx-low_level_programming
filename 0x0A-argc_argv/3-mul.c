@@ -11,11 +11,8 @@ int main(int argc, char *argv[])
 {
 	long m;
 
-	if (argc == 1)
-	{
+	if (argc != 3)
 		printf("Error\n");
-		return (1);
-	}
 	else
 	{
 		m = (long) atoi(argv[1]) * (long) atoi(argv[2]);
