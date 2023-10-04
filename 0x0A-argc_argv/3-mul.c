@@ -2,21 +2,23 @@
 #include <stdlib.h>
 
 /**
-* main - program that prints the number of arguments passed into it.
-* @argc: int var
-* @argv: char var
-* Return: 0 or 1
-**/
+ * main - prints all arguments received.
+ * @argc: type int argument
+ * @argv: type char argument of string.
+ * Return: if not receive 2 arg, rt error
+ */
 int main(int argc, char *argv[])
 {
-	long m;
+	int n1, n2, mul;
 
 	if (argc != 3)
 		printf("Error\n");
 	else
 	{
-		m = (long) atoi(argv[1]) * (long) atoi(argv[2]);
+		n1 = atoi(argv[1]);
+		n2 = atoi(argv[2]);
+		mul = n1 * n2;
+		printf("%d\n", mul);
 	}
-	printf("%ld\n", m);
 	return (0);
 }
