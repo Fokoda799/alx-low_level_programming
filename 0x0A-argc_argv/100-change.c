@@ -10,13 +10,21 @@
 **/
 int main(int argc, char *argv[])
 {
-	int cents = atoi(argv[1]);
+	int cents;
 	int i = 0;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
+	}
+
+	cents = atoi(argv[1]);
+
+	if (cents < 0)
+	{
+		printf("0\n");
+		return (1)
 	}
 	while (cents > 0)
 	{
@@ -32,10 +40,6 @@ int main(int argc, char *argv[])
 			cents -= 1;
 		i++;
 	}
-
-	if (cents < 0)
-		printf("0\n");
-	else
-		printf("%d\n", i);
+	printf("%d\n", i);
 	return (0);
 }
