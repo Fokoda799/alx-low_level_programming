@@ -3,11 +3,11 @@
 #include <stdlib.h>
 
 /**
- * **alloc_grid - return a pointer to a 2 dimensional array of int
- * @width: type int width.
- * @height: type int height.
- * Return: Null if 0 or negative.
- */
+* **alloc_grid - return a pointer to a 2 dimensional array of int
+* @width: type int width.
+* @height: type int height.
+* Return: Null if 0 or negative.
+*/
 int **alloc_grid(int width, int height)
 {
 	int **grid;

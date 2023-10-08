@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * argstostr - concatenates the arguments and gives pointer.
- * @ac: the argc for arguments count.
- * @av: the arguments vector to work on it.
- * Return: the pointer to a new mymystring or NULL if failed.
- */
+* argstostr - concatenates the arguments and gives pointer.
+* @ac: the argc for arguments count.
+* @av: the arguments vector to work on it.
+* Return: the pointer to a new mymystring or NULL if failed.
+*/
 
 char *argstostr(int ac, char **av)
 

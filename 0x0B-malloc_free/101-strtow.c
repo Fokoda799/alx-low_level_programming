@@ -5,10 +5,10 @@ void mywstr(char **, char *);
 void cmyword(char **, char *, int, int, int);
 
 /**
- * strtow - a function that split a string to words.
- * @str: the string to work on it.
- * Return: a pointer of the splited words.
- */
+* strtow - a function that split a string to words.
+* @str: the string to work on it.
+* Return: a pointer of the splited words.
+*/
 
 char **strtow(char *str)
 {

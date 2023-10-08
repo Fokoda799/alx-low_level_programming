@@ -3,11 +3,11 @@
 #include <stdlib.h>
 
 /**
- * create_array - create array of char.
- * @c: type char memory value.
- * @size: type unsigned int of the memory to print.
- * Return: Null if fails or if size is 0.
- */
+* create_array - create array of char.
+* @c: type char memory value.
+* @size: type unsigned int of the memory to print.
+* Return: Null if fails or if size is 0.
+*/
 char *create_array(unsigned int size, char c)
 {
 	char *p;
