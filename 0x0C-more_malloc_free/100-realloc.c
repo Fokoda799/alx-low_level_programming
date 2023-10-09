@@ -3,12 +3,12 @@
 #include <stdlib.h>
 
 /**
- * _realloc - creates an array of integers
- * @ptr: type char pointer of memory previously allocated
- * @old_size: type unsigned int size in bytes
- * @new_size: type unsigned int size in bytes
- * Return: p or NULL
- */
+* realloc - creates an array of integers
+* @ptr: type char pointer of memory previously allocated
+* @old_size: type unsigned int size in bytes
+* @new_size: type unsigned int size in bytes
+* Return: p or NULL
+*/
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	unsigned int x;
