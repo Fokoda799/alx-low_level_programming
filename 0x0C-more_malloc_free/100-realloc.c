@@ -1,41 +1,50 @@
-#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-/**
-* _realloc - creates an array of integers
-* @ptr: type char pointer of memory previously allocated
-* @old_size: type unsigned int size in bytes
-* @new_size: type unsigned int size in bytes
-* Return: p or NULL
-*/
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
-{
-	unsigned int x;
-
-
-	if (new_size == old_size)
-		return (ptr);
-	if (ptr == NULL)
-	{
-		p = malloc(new_size);
-		if (p == NULL)
-			return (NULL);
-		return (p);
-	}
-	if (new_size == 0)
-	{
-		free(ptr);
-		return (NULL);
-	}
-	void *new_ptr = malloc(new_size);
-
-	if (new_ptr == NULL)
-		return (NULL);
-	void *ns = ptr;
-
-	for (x = 0; x < old_size; x++)
-		*(p + x) = *(ns + x);
-	free(ptr);
-	return (new_ptr);
-}
+#include <stdlib.h> 
+ #include "main.h" 
+  
+ /** 
+ * *_realloc - reallocates a memory block using malloc and free 
+ * @ptr: pointer to the memory previsouly allocated by malloc 
+ * @old_size: size of the allocated memory for ptr 
+ * @new_size: new size of the new memory block 
+ * 
+ * Return: pointer to the newly allocated memory block 
+ */ 
+ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size) 
+ { 
+                 char *ptr1; 
+                 char *old_ptr; 
+                 unsigned int i; 
+  
+                 if (new_size == old_size) 
+                 return (ptr); 
+  
+                 if (new_size == 0 && ptr) 
+                 { 
+                         free(ptr); 
+                         return (NULL); 
+                 } 
+  
+                 if (!ptr) 
+                 return (malloc(new_size)); 
+  
+                 ptr1 = malloc(new_size); 
+                 if (!ptr1) 
+                 return (NULL); 
+  
+                 old_ptr = ptr; 
+  
+                 if (new_size < old_size) 
+                 { 
+                         for (i = 0; i < new_size; i++) 
+                         ptr1[i] = old_ptr[i]; 
+                 } 
+  
+                 if (new_size > old_size) 
+                 { 
+                         for (i = 0; i < old_size; i++) 
+                         ptr1[i] = old_ptr[i]; 
+                 } 
+  
+                 free(ptr); 
+                 return (ptr1); 
+ }
