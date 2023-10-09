@@ -1,31 +1,55 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+/**
+ * _strlen - Returns the lenght of a string.
+ * @s: Type char pointer
+ * Return: Always 0.
+ */
+int _strlen(char *s)
 {
-	int len1, len2;
-	int i;
+	unsigned int c;
 
-	for (len = 0; *(s1 + len1) != '\0'; len++)
-		;
-	for (len = 0; *(s2 + len2) != '\0'; len++)
-                ;
-	if (n >= len2)
+	for (c = 0; s[c] != 0; c++)
 	{
-		*s1 = malloc(len1 + len2);
-        	if (*s1 == NULL)
-                	return (NULL);
-		for (i = 0; i < len2; i++)
-                	*(s1 + len + i) = *(s + i);
-	else
-	{
+	}
+	return (c);
 
-		*s1 = malloc(len1 + n);
-		if (*s1 == NULL)
-			return (NULL);
-		for (i = 0; i < n; i++)
-			*(s1 + len + i) = *(s + i);
-	return (s1);
 }
 
+/**
+ * *string_nconcat - function that concatenates two strings
+ * @s1: type char
+ * @s2: type char
+ * @n: type unsigned int
+ * Return: NULL
+ */
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	char *p;
+	unsigned int  len, x, y;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
+	len = (unsigned int)_strlen(s1);
+	p = malloc((len + n + 1) * sizeof(char));
+	if (p == NULL)
+		return (NULL);
+
+	for (x = 0, y = 0; x < (len + n); x++)
+	{
+		if (x < len)
+			*(p + x) = *(s1 + x);
+		else
+		{
+			*(p + x) = *(s2 + y);
+			y++;
+		}
+	}
+	*(p + x) = '\0';
+
+	return (p);
+}
