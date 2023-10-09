@@ -3,11 +3,11 @@
 #include <stdlib.h>
 
 /**
- * array_range - creates an array of integers
- * @min: type int minimum size
- * @max: type int maximum size
- * Return: NULL if malloc fails or min > max
- */
+* array_range - creates an array of integers
+* @min: type int minimum size
+* @max: type int maximum size
+* Return: NULL if malloc fails or min > max
+*/
 int *array_range(int min, int max)
 {
 	int *p;
