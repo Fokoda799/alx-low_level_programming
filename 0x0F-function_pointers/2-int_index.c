@@ -10,15 +10,15 @@
 */
 int int_index(int *array, size_t size, int (*cmp)(int))
 {
-int x;
+	int x;
 
-if (array == NULL || cmp == NULL || size < 1)
-return (-1);
+	if (array == NULL || cmp == NULL || size < 1)
+		return (-1);
 
-for (x = 0; x < size; x++)
-{
-if (cmp(*(array + x)))
-return (x);
-}
-return (-1);
+	for (x = 0; x < size; x++)
+	{
+		if (cmp(*(array + x)))
+			return (x);
+	}
+	return (-1);
 }
