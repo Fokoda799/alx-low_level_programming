@@ -5,7 +5,7 @@
 /**
 * print_all - a function that prints anything.
 * @format: a list of types of arguments passed to the function.
-* Return: Just Nothing. 
+* Return: Just Nothing.
 */
 
 void print_all(const char * const format, ...)
@@ -13,9 +13,7 @@ void print_all(const char * const format, ...)
 	int indx, findic;
 	char *str;
 	va_list myapx;
-
-	indx = 0;
-
+indx = 0;
 	va_start(myapx, format);
 	while (format != NULL && format[indx] != '\0')
 	{
