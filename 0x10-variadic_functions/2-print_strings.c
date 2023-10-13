@@ -2,12 +2,13 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
+
 /**
- * print_strings - func that print strings, followed by a new line
- * @n: Type unsigned int, number of str paseed to a function
- * @separator: type char pointer string to be printed between numbers
- * Return: 0
- */
+* print_strings - func that print strings, followed by a new line
+* @n: Type unsigned int, number of str paseed to a function
+* @separator: type char pointer string to be printed between numbers
+* Return: 0
+*/
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list valist;

@@ -3,11 +3,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * print_numbers - func that print numbers followed by a new line.
- * @n: Type unsigned int number of int passed to a function
- * @separator: type char pointer string to be printed between numbers
- * Return: 0
- */
+* print_numbers - func that print numbers followed by a new line.
+* @n: Type unsigned int number of int passed to a function
+* @separator: type char pointer string to be printed between numbers
+* Return: 0
+*/
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list valist;
