@@ -20,6 +20,11 @@ typedef struct list
 } list_t;
 
 size_t print_list(const list_t *h);
-*add_node(list_t **head, const char *str);
+add_node(list_t **head, const char *str);
+list_len(const list_t *h);
+add_node_end(list_t **head, const char *str);
+free_list(list_t *head);
+void print_before_main(void) __attribute__((constructor));
+void print_before_main(void);
 #endif
 
