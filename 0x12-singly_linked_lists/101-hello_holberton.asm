@@ -1,21 +1,21 @@
-section .data
-    hello_fmt db "Hello, Holberton",10,0  ; The format string with newline
+extern printf
 
-section .text
-    global _start
+    section .data
+message:    db "Hello, Holberton", 0
+format:     db "%s", 10, 0
 
-_start:
-    ; Prepare arguments for printf
-    mov rdi, hello_fmt  ; Format string
-    xor rax, rax       ; Clear RAX to indicate no floating-point arguments
+    section .text
 
-    ; Call printf
-    call printf
+    global main
+main:
+    push    rbp
 
-    ; Exit the program
-    mov rax, 60         ; sys_exit
-    xor rdi, rdi        ; Return code 0
-    syscall
+    mov     rax, 0
+    mov rdi,format
+    mov rsi,message
+    call    printf
 
-section .text
-    extern printf  ; Declare printf from the C library
+    pop rbp
+
+    mov     rax, 0
+    ret
