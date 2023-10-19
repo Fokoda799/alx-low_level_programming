@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <string>
 
 /**
 * struct list - linked list.
@@ -19,5 +20,6 @@ typedef struct list
 } list_t;
 
 size_t print_list(const list_t *h);
+*add_node(list_t **head, const char *str);
 #endif
 

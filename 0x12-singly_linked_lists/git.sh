@@ -4,7 +4,7 @@
 git add .
 
 # Commit the changes with a provided commit message
-commit_message="Your commit message goes here"
+commit_message="Done"
 git commit -m "$commit_message"
 
 # Push the changes to the remote repository
