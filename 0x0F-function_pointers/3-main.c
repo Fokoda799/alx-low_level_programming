@@ -18,7 +18,11 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
+<<<<<<< HEAD
 		return (1);
+=======
+		return (98);
+>>>>>>> 556200c81beccc63e427cfa2a2d4492d0037b486
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
