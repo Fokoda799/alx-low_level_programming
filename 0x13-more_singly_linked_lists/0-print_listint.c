@@ -15,7 +15,7 @@ size_t print_listint(const listint_t *h)
 
 	while (tmp != NULL)
 	{
-		_putchar((tmp->n) + '0');
+		_putchar(tmp->n + '0');
 		_putchar("\n");
 		tmp = tmp->next;
 		count++;
