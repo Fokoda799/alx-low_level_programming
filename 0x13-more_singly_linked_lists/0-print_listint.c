@@ -10,10 +10,7 @@ size_t print_listint(const listint_t *h)
 	const listint_t *tmp = h;
 	size_t count = 0;
 
-	if (h == NULL)
-		return (1);
-
-	while (tmp != NULL)
+	while (tmp)
 	{
 		_putchar((tmp->n) + '0');
 		_putchar('\n');
