@@ -1,15 +1,30 @@
 #include "main.h"
 
+/**
+ * print_binary -  function that returns the number.
+ * @n: int number
+ * Return: Nothing.
+ */
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask, array = 0, d = 1;
+	unsigned long int mask = 1;
 
-	while (n != 0)
+	if (n == 0)
 	{
-		mask = n & 1;
-		array = array + (mask * d);
-		d = d * 10;
-		n = n >> 1;
+		putchar('0');
+		return;
 	}
-	printf("%ld", array);
+
+	while (mask <= n)
+		mask <<= 1;
+	mask >>= 1;
+
+	while (mask > 0)
+	{
+		if (n & mask)
+			putchar('1');
+		else
+			putchar('0');
+		mask >>= 1;
+	}
 }
