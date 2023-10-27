@@ -2,10 +2,14 @@
 
 void print_binary(unsigned long int n)
 {
-	int i = 0;
+	unsigned long int mask, array = 0, d = 1;
 
 	while (n != 0)
 	{
-		
+		mask = n & 1;
+		array = array + (mask * d);
+		d = d * 10;
+		n = n >> 1;
 	}
+	printf("%ld", array);
 }
