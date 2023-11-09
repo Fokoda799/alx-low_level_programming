@@ -36,7 +36,7 @@ hare = hare->next;
 
 tortoise = tortoise->next;
 while (tortoise != hare)
-{ 
+{
 nodes++;
 tortoise = tortoise->next;
 }

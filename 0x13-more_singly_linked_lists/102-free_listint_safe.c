@@ -26,7 +26,7 @@ free(*h);
 len++;
 }
 else
-{ 
+{
 free(*h);
 *h = NULL;
 len++;
